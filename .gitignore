@@ -1,0 +1,33 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+*.log
+
+# Claude Code / planning artifacts (do NOT push to public repo)
+.claude/
+.remember/
+.planning/
+.cursor/
+.vscode/
+.idea/
+
+# Vercel
+.vercel/
+
+# Temp / backup
+*.tmp
+*.bak
+*.orig
+*~
+
+# Node (just in case anyone adds tooling later)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
