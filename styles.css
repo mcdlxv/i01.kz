@@ -1094,6 +1094,14 @@ body.js-reveals .reveal.in {
   .nav__menu { display: none; }
   .nav { grid-template-columns: 1fr; }
 
+  /* Hero — strip visual chrome on phone: dividers, borders, labels */
+  .hero__intro .divider { display: none; }
+  .hero__bottom { border-top: none; padding-top: 0; gap: 20px; }
+  .hero__chip-label { display: none; }
+  .hero__chip-stack { gap: 8px; }
+  .hero__chip-row { gap: 0; }
+  .chip { padding: 5px 11px; font-size: 10px; letter-spacing: 0.05em; }
+
   /* Hero film tile — 16:9 too thin on phone; switch to portrait */
   .tile--hero .tile__media { aspect-ratio: 4/5; }
   .tile--supp .tile__media { aspect-ratio: 4/5; }
