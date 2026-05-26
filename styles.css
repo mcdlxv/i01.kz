@@ -878,16 +878,53 @@ h1, h2, h3 {
   padding-top: 6px;
 }
 .practice__chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: block;
+  font-family: var(--mono);
+  font-size: clamp(15px, 1.7vw, 21px);
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--fg);
+  max-width: 60ch;
 }
+.practice__chips .chip {
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  letter-spacing: inherit;
+  color: var(--fg);
+  backdrop-filter: none;
+  text-transform: inherit;
+  cursor: default;
+  transition: color 0.25s ease;
+}
+.practice__chips .chip:hover {
+  color: var(--accent);
+}
+.practice__chips .chip + .chip::before {
+  content: "  ·  ";
+  color: var(--fg-dim);
+  font-weight: 400;
+}
+/* Make practice label match the heavier type rhythm */
+.practice__label {
+  padding-top: 8px;
+  color: var(--fg-mute);
+}
+
 @media (max-width: 720px) {
   .practice__row {
     grid-template-columns: 1fr;
     gap: 12px;
   }
   .practice__stack { gap: 32px; }
+  .practice__chips { font-size: 14px; line-height: 1.7; }
+  .practice__label { padding-top: 0; }
 }
 
 /* ── Contact / Services ───────────────────────────────── */
