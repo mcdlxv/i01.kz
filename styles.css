@@ -850,6 +850,46 @@ h1, h2, h3 {
   color: var(--fg);
 }
 
+/* ── Practice ───────────────────────────────────────────
+   Chip-cloud of WHERE / HOW. Reuses .chip styling from hero. */
+.practice {
+  padding-top: clamp(80px, 12vh, 140px);
+  padding-bottom: clamp(80px, 12vh, 140px);
+}
+.practice__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 48px;
+}
+.practice__row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: start;
+  gap: 32px;
+}
+.practice__label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  white-space: nowrap;
+  padding-top: 6px;
+}
+.practice__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media (max-width: 720px) {
+  .practice__row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .practice__stack { gap: 32px; }
+}
+
 /* ── Contact / Services ───────────────────────────────── */
 .contact {
   padding-bottom: 120px;
